@@ -19,6 +19,11 @@ References:
 
 * "The red board has no 2.5V" (on the GPIO A-E)
   * 3.3V is available in the A-E GPIO, but not 2.5V anymore
+* "Yes, but there are three different suffixes in vivado. When we use this, we choose the suffix xxxxxx0."
+  * Original: "是的，但是vivado里面有三个不同的后缀。我们使用的时候选择后缀是xxxxxxxx0的这个。"
+  * Not sure which question this was a response to:
+    * Datasheet for Spansion FL256SAIFGO?
+    * RTL8211 TXDLY & RXDLY are pulled up by 10k resistor, correct?
 
 
 # Open Questions
