@@ -14,6 +14,15 @@ References:
   * I purchased the JTAG programmer with it
 * [Blinky Example](https://github.com/fusesoc/blinky/commit/0f140e0f04188b53eaefd75418a4cad2d8546435) by Anderson Ignacio da Silva
   * He calls the board STVL7325 but my board has no such identifier on it
+* The [datasheets](datasheets/) directory has pinouts provided by the vendor and
+  other information.
+  * I ran the documentation through Google Translate for convenience, and cleaned
+    up the provided pinout XLSX file for easier reading.
+* The provided JTAG programmer has a USB-C connector and an FTDI chip labeled
+  2126-C DGWPQG1 [FT4232HL](https://ftdichip.com/products/ft4232hl/)
+  * Seems to support 1.5, 1.8, 2.5 and 3.3V via [WT245](https://www.ti.com/lit/gpn/sn74avc4t245)
+    and [AMS1117](http://www.advanced-monolithic.com/pdf/ds1117.pdf)
+  
 
 # Information Direct from Vendor
 
@@ -28,13 +37,23 @@ References:
 
 # Open Questions
 
-* What are the pins for the two HDMI ports? (XLS file has only one)
-* What are the pins for the DDR3 SODIMM?
-* What are the pins for the RTL8211? (XLS file has 88E1111)
+* Where can I find out information about the Spansion FL256SAIFGO memory chip?
 * How do I get the JTAG programmer to be fast, 
   and the Hardware Manager in Vivado to be fast?
   * Do I need to set some jumper?
 * What can connect to the B2B connector?
+
+
+# Tested
+
+* 3.3V rails on 0.1" headers A1-E1
+* 3.3V rail on BTB connector (but I have no female BTB 80-pin boards)
+* 3.3V, 12.0V and Vadj (2.5V) rail on FMC
+  * Used [IAM Electronic FMC LPC Pin Header](https://fmchub.github.io/projects/FMC_LPC_PINHEADER/Datasheet/FMC_LPC_PINHEADER_datasheet.html)
+    board to test the FMC voltages
+* 8 main LEDs plus the 4 LEDs adjacent to the SFP+ cages
+* Three pushbuttons
+* 6-pin JTAG header (using provided programmer)
 
 
 # TODO
